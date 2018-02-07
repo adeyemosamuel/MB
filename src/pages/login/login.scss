@@ -11,8 +11,16 @@ page-login {
     margin-top: 30px;
 }
 
-ion-input{
-    border: 1px solid limegreen;
-    background-color: rgba(79,193,67, 0.05);
+.item1{
+    border: 1px solid indigo;
+    border-radius: 20px;
+    background-color: rgba(92,6,140,0.05);
+}
+
+.item2{
+    border: 1px solid indigo;
+    border-radius: 20px;
+    background-color: rgba(92,6,140,0.05);
+    margin-top: 30px
 }
 }

@@ -1,42 +1,42 @@
 <ion-content padding>
 
+
+  <!-- Logo -->
+  <div text-center class="animated fadeInDown">
+    <div class="logo">
+      <img src="../assets/imgs/fcmb.png">
+    </div>
+    <h2 ion-text class="text-primary">
+      <strong>FCMB</strong> Trade
+    </h2>
+  </div>
+
+  <div class="text" text-center>
+    <h2>Log in to
+      <strong>FCMB</strong> Trade</h2>
+    <p>Enter your details below</p>
+  </div>
   
-    <!-- Logo -->
-    <div text-center class="animated fadeInDown">
-      <div class="logo">
-        <img  src="../assets/imgs/fcmb.png">
-      </div>
-      <h2 ion-text class="text-primary">
-        <strong>FCMB</strong> Trade
-      </h2>
+    <!-- Login form -->
+    <div>
+      <ion-item class="item1">
+        <ion-icon name="mail" item-start class="text-primary"></ion-icon>
+        <ion-input placeholder="email address" type="email"></ion-input>
+      </ion-item>
     </div>
 
-    <div class="text" text-center>
-      <h2>Log in to <strong>FCMB</strong> Trade</h2>
-      <p>Enter your details below</p>
-    </div>
     <div>
-      <!-- Login form -->
-    <div>
-        <ion-item no-lines>
-          <!-- <ion-label stacked> -->
-            
-          
-          <!-- </ion-label> -->
-          <ion-input placeholder="email address" type="email"><ion-icon name="mail" item-start class="text-primary"></ion-icon></ion-input>
-        </ion-item>
-  
-        <ion-item no-lines>
-          <!-- <ion-label stacked> -->
-              
-           
-          <!-- </ion-label> -->
-          <ion-input placeholder="enter your password" type="password"></ion-input>
-        </ion-item>
-      </div>
-  
-      <p text-right ion-text color="secondary" tappable ><strong>Forgot Password?</strong></p>
-  
+
+      <ion-item class="item2">
+          <ion-icon name="lock" item-start class="text-primary"></ion-icon>
+        <ion-input placeholder="enter your password" type="password"></ion-input>
+      </ion-item>
     </div>
+
+    <p text-right ion-text color="secondary" tappable>
+      <strong>Forgot Password?</strong>
+    </p>
+
+  
 
 </ion-content>
