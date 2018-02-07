@@ -1,3 +1,18 @@
 page-login {
+.logo{
+    
+    margin: 0 auto;
+    margin-top: 80px;
+    height: 80px;
+    width: 80px;
+}
 
+.text{
+    margin-top: 30px;
+}
+
+ion-input{
+    border: 1px solid limegreen;
+    background-color: rgba(79,193,67, 0.05);
+}
 }
