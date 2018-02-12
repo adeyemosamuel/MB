@@ -11,6 +11,17 @@ $text-input-md-highlight-color: transparent;
 $text-input-md-show-valid-highlight: transparent;
 
 
+
+
+
+
+
+// $segment-button-md-border-bottom-width: 2px;
+// $segment-button-md-border-color-activated:#ffb822;
+// $segment-button-md-text-color-activated: white;
+
+
+
 // The app direction is used to include
 // rtl styles in your app. For more info, please see:
 // http://ionicframework.com/docs/theming/rtl-support/
@@ -50,6 +61,15 @@ $colors: (
   #ffb822,
   money: #ffffff
 );
+
+
+.tabs-md .tab-button {
+  color: #ffffff !important;
+ }
+
+ .tabs-md .tab-button[aria-selected=true] {
+   color:#ffb822 !important;
+ }
 
 
 // App iOS Variables

@@ -2,12 +2,30 @@
 <ion-header>
 
   <ion-navbar color="fcmb">
-    <ion-title text-center>Add Forms</ion-title>
+    <!-- <ion-title text-center>RETAIL</ion-title> -->
+    <ion-toolbar > 
+        <ion-segment  color="fcmb2" [(ngModel)]="forms">
+          <ion-segment-button value="a">
+            FORM A
+          </ion-segment-button>
+          <ion-segment-button value="remittance">
+            REMITTANCE
+          </ion-segment-button>
+        </ion-segment> 
+    
+      </ion-toolbar>
   </ion-navbar>
+
+  
 
 </ion-header>
 
 
 <ion-content padding>
+    <div class="main-content" (swipe)="swipe($event)">
+
+
+      
+    </div>
 
 </ion-content>
