@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { ViewController } from 'ionic-angular/navigation/view-controller';
+import { AppdataProvider } from '../../providers/appdata/appdata';
 
 
 
@@ -11,11 +12,14 @@ import { ViewController } from 'ionic-angular/navigation/view-controller';
 })
 export class FormaPage {
 
-  constructor(public navCtrl: NavController, private viewCtrl: ViewController, public navParams: NavParams) {
+  stateData: any = [];
+  states: any;
+
+  constructor(public navCtrl: NavController,private appdata:AppdataProvider, private viewCtrl: ViewController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-   
+    this.stateData = this.appdata.getState();
   }
 
   selectCancel() {

@@ -1,18 +1,49 @@
-
 <ion-header>
 
   <ion-navbar color="fcmb">
-    <ion-title text-center><span text-color="my-custom-color">FORM A</span></ion-title>
+    <ion-title text-center>
+      <span text-color="my-custom-color">FORM A</span>
+    </ion-title>
     <ion-buttons end>
       <button ion-button (click)="selectCancel()">
         <span text-color="my-custom-color">Cancel</span>
-          </button>
+      </button>
     </ion-buttons>
   </ion-navbar>
+  <!-- <ion-item-divider color="fcmb">BENEFICIARY DETAILS</ion-item-divider> -->
 
 </ion-header>
 
 
 <ion-content padding>
+
+    <div>
+      <ion-item no-lines class="item1">
+        <ion-input placeholder="*Enter Full Name" [(ngModel)]="name" type="text"></ion-input>
+      </ion-item>
+    </div>
+
+    <div>
+      <ion-item no-lines class="item2">
+        <ion-input placeholder="*Address" [(ngModel)]="address" type="text"></ion-input>
+      </ion-item>
+    </div>
+
+    <div>
+        <ion-item no-lines class="item3">
+          <ion-input placeholder="*Town" [(ngModel)]="town" type="text"></ion-input>
+        </ion-item>
+      </div>
+
+      <div>
+      <ion-item no-lines class="item4">
+        <!-- <ion-label stacked>States</ion-label> -->
+          <ion-select placeholder="*States" class="option" [(ngModel)]="states">
+            <ion-option class="option" *ngFor="let s of stateData" [value]="s.value">{{s.label}}</ion-option>
+          </ion-select>
+        </ion-item>
+      </div>
+  
+
 
 </ion-content>
