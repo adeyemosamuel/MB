@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { ModalController } from 'ionic-angular/components/modal/modal-controller';
 
 
 @IonicPage()
@@ -11,11 +12,31 @@ export class AddformsPage {
 
   forms = "a";
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, private modalCtrl: ModalController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
    
+  }
+
+ 
+
+  retailRemittanceForm(){
+    let modal = this.modalCtrl.create('FormremittancePage');
+    modal.present();
+    modal.onDidDismiss(data => {
+      console.log(data);
+     
+    });
+  }
+
+  retailForma(){
+    let modal = this.modalCtrl.create('FormaPage');
+    modal.present();
+    modal.onDidDismiss(data => {
+      console.log(data);
+     
+    });
   }
 
   swipe(event) {
