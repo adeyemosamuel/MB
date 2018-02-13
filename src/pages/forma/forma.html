@@ -35,11 +35,12 @@
         </ion-item>
       </div>
 
+<div class="states"><span>States</span></div>
+
       <div>
       <ion-item no-lines class="item4">
-        <!-- <ion-label stacked>States</ion-label> -->
-          <ion-select placeholder="*States" class="option" [(ngModel)]="states">
-            <ion-option class="option" *ngFor="let s of stateData" [value]="s.value">{{s.label}}</ion-option>
+          <ion-select [(ngModel)]="states">
+            <ion-option  class="myCustomSelect"  *ngFor="let s of stateData" [value]="s.value">{{s.label}}</ion-option>
           </ion-select>
         </ion-item>
       </div>

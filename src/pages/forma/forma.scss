@@ -28,10 +28,19 @@ page-forma {
     .item4{
         border: 1px solid #ffb822;
         margin-top:20px;
+        margin-bottom: 20px;
         background-color: rgba(255,184,34,0.75);
     }
 
     .option {
         text-transform: capitalize;
     }
+
+    .states{
+        margin-top: 10px;
+    }
+
+    .myCustomSelect{
+        max-width: 100% !important;
+        }
 }
