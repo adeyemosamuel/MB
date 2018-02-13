@@ -3,10 +3,28 @@ page-addforms {
         height: 100%;
       }
 
+      [text-color="my-custom-color"] {
+        color: #ffb822;
+    }
+
       .segment-ios{
         width: 80%;
         margin: 5px auto;
 
+    }
+
+    .button1{
+        margin-right: 80px;
+        width: 60%;
+        height: 30px;
+        display: block;
+    }
+
+    .button2{
+        margin-right: 60px;
+        width: 70%;
+        height: 30px;
+        display: block;
     }
       
 }
