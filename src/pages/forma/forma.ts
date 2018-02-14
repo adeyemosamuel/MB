@@ -14,12 +14,15 @@ export class FormaPage {
 
   stateData: any = [];
   states: any;
+  countries: any;
+  countryData: any = [];
 
   constructor(public navCtrl: NavController,private appdata:AppdataProvider, private viewCtrl: ViewController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
     this.stateData = this.appdata.getState();
+    this.countryData= this.appdata.getCountry();
   }
 
   selectCancel() {
