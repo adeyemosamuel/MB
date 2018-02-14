@@ -42,16 +42,19 @@
     <div>
       <ion-item style="color:white" no-lines class="item5">
         <ion-select class="Select" [(ngModel)]="countries">
-          <ion-option class="option" *ngFor="let c of countryData">{{c.country}}</ion-option>
+          <ion-option class="option" [value]="c.country" *ngFor="let c of countryData">{{c.country}}</ion-option>
         </ion-select>
       </ion-item>
     </div>
 
-  <div class="states">
-    <span text-color="my-custom-color2">*Choose a State</span>
-  </div>
+    <!-- *ngIf="countries =='Nigeria'" -->
 
-  <div>
+  <!-- <div class="states"> -->
+    <!-- <span class="states" text-color="my-custom-color2">*Choose a State</span> -->
+  <!-- </div> -->
+
+  <div *ngIf="countries =='Nigeria'" >
+      <span class="states" text-color="my-custom-color2">*Choose a State</span>
     <ion-item style="color:white" no-lines class="item4">
       <ion-select class="Select" [(ngModel)]="states">
         <ion-option *ngFor="let s of stateData">{{s.label}}</ion-option>
