@@ -44,11 +44,10 @@
           </ion-item>
         </div>
     
-      <div class="states">
-        <span text-color="my-custom-color2">*Choose a State</span>
-      </div>
+      
     
-      <div>
+      <div *ngIf="countries =='Nigeria'">
+          <span text-color="my-custom-color2">*Choose a State</span>
         <ion-item style="color:white" no-lines class="item4">
           <ion-select class="Select" [(ngModel)]="states">
             <ion-option *ngFor="let s of stateData">{{s.label}}</ion-option>
@@ -100,9 +99,9 @@
     
     
         <div class="button">
-            <button ion-button block tappable color="fcmb2">
+            <button ion-button block tappable color="fcmb2" (click)="submitFormRemittance()">
               <span style="font-weight:bold; color:white">SUBMIT</span>
             </button>
-            </div>
+            </div> 
 
 </ion-content>

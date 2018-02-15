@@ -1,7 +1,13 @@
 {
-  "name": "FCMBtrade",
+  "name": "FCMBTrade",
   "app_id": "",
   "type": "ionic-angular",
+  "proxies": [
+    {
+      "path": "/getForma.json",
+      "proxyUrl": "https://my.api.mockaroo.com/getForma.json"
+    }
+  ],
   "integrations": {
     "cordova": {}
   }

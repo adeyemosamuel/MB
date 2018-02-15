@@ -1,0 +1,37 @@
+name 
+address 
+town 
+countries 
+states 
+phone 
+route 
+identification 
+idnumber
+comments
+username
+password
+
+name: any; 
+address: any;
+town: any;  
+countries: any; 
+states: any; 
+phone: any; 
+route: any; 
+identification: any; 
+idnumber: any;
+ comments: any;
+ username: any;
+ password: any;
+
+name: this.name,
+address: this.address,
+town:this.town
+countries:this.town,
+states: this.states,
+phone: this.phone,
+route: this.route, 
+identification: this.identification, 
+idnumber: this.idnumber,
+comments: this.comments,
+username: this.username

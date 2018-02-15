@@ -23,7 +23,32 @@
 
 
 <ion-content padding>
+  <!-- Swipe -->
     <div class="main-content" (swipe)="swipe($event)">
+
+<!-- Segment Switchcase -->
+<div [ngSwitch]="forms">
+    <ion-list *ngSwitchCase="'a'">
+
+      <ion-item no-lines *ngFor="let a of FormArray">
+          <h2 text-uppercase style="white-space:normal">Name:{{a.name}}</h2>
+          <p style="white-space:normal" >Address:{{a.address}}</p>
+          <!-- <span style="color:orange">STATUS:{{a.status}}</span> -->
+      </ion-item>
+    </ion-list>
+
+
+    <ion-list *ngSwitchCase="'remittance'"> 
+      <ion-item no-lines *ngFor="let r of FormRemittance">
+          <h2 text-uppercase style="white-space:normal">Name:{{r.name}}</h2>
+          <p style="white-space:normal" >Address:{{r.name}}</p>
+          <!-- <span style="color:orange">STATUS:{{r.status}}</span> -->
+      </ion-item>
+    </ion-list>
+
+  </div>
+
+<!-- Fab -->
       <ion-fab right bottom>
         <button ion-fab color="fcmb2"><ion-icon name="add"></ion-icon></button>
         <ion-fab-list  side="left">
