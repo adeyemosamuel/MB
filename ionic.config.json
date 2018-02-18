@@ -4,8 +4,8 @@
   "type": "ionic-angular",
   "proxies": [
     {
-      "path": "/getForma.json",
-      "proxyUrl": "https://my.api.mockaroo.com/getForma.json"
+      "path": "/getFormAdetails",
+      "proxyUrl": "http://demo4253111.mockable.io/getFormAdetails"
     }
   ],
   "integrations": {

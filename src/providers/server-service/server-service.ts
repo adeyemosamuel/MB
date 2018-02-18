@@ -7,7 +7,8 @@ import 'rxjs/add/operator/toPromise';
 @Injectable()
 export class ServerServiceProvider {
   
- url: string = 'https://my.api.mockaroo.com/getForma.json';
+ url: string = ' http://demo4253111.mockable.io/getFormAdetails';
+ 
   // url: string = '/api';
 
   constructor(public http: Http) {

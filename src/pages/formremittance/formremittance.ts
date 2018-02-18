@@ -49,11 +49,11 @@ export class FormremittancePage {
     
   }
 
-  async getUsernameFromStorage(){
-    this.store.get('username').then((val) => {
-      this.username = val;
-    });
-  }
+  // async getUsernameFromStorage(){
+  //   this.store.get('username').then((val) => {
+  //     this.username = val;
+  //   });
+  // }
 
 
   selectCancel() {
@@ -62,43 +62,17 @@ export class FormremittancePage {
 
   // Submit Form to Backend and save to storage
 
-  // SubmitFormRemittance() {
+  SubmitFormRemittance() {
 
-  //   if (!this.verify.verifyBeforeSubmit(this.name, this.address, this.town, this.countries, this.states, this.phone, this.route, this.identification, this.idnumber, this.comments)) {
-  //     alert(this.verify.errorMessage);
-  //     this.alertCtrl.create({
-  //       subTitle: 'Error',
-  //       message: this.verify.errorMessage
-  //     }).present();
-  //     return false;
-  //   }
+    if (!this.verify.verifyBeforeSubmit(this.name, this.address, this.town, this.countries, this.states, this.phone, this.route, this.identification, this.idnumber, this.comments)) {
+      alert(this.verify.errorMessage);
+      this.alertCtrl.create({
+        subTitle: 'Error',
+        message: this.verify.errorMessage
+      }).present();
+      return false;
+    }
 
-  //   let body = {
-  //     name: this.name,
-  //     address: this.address,
-  //     town: this.town,
-  //     countries: this.countries,
-  //     states: this.states,
-  //     phone: this.phone,
-  //     route: this.route,
-  //     identification: this.identification,
-  //     idnumber: this.idnumber,
-  //     comments: this.comments,
-  //     username: this.username
-  //   };
-  //   console.log(body);
-
-  //   this.server.processData(body, '/SubmitFormRemittance').then((data) => {
-  //     console.log(data);
-  //   }).catch((err) => {
-  //     console.log(err)
-  //   })
-  // }
-
-
-//temporal save
-
-  submitFormRemittance() {
     let body = {
       name: this.name,
       address: this.address,
@@ -109,16 +83,48 @@ export class FormremittancePage {
       route: this.route,
       identification: this.identification,
       idnumber: this.idnumber,
-      comments: this.comments
+      comments: this.comments,
+      username: this.username
     };
-    this.FormRemittance.push(body);
-    this.store.set('addforms', this.FormRemittance );
+    console.log(body);
+
+    this.server.processData(body, '/PostFormRemittance').then((data) => {
+      console.log(data);
+    }).catch((err) => {
+      console.log(err)
+    });
+
     this.loadingCtrl.create({
       content: 'Saving...',
       duration: 3000,
       dismissOnPageChange: true
     }).present();
-    this.navCtrl.setRoot('AddformsPage');
   }
+
+
+//temporal save
+
+  // submitFormRemittance() {
+  //   let body = {
+  //     name: this.name,
+  //     address: this.address,
+  //     town: this.town,
+  //     countries: this.countries,
+  //     states: this.states,
+  //     phone: this.phone,
+  //     route: this.route,
+  //     identification: this.identification,
+  //     idnumber: this.idnumber,
+  //     comments: this.comments
+  //   };
+  //   this.FormRemittance.push(body);
+  //   this.store.set('addforms', this.FormRemittance );
+  //   this.loadingCtrl.create({
+  //     content: 'Saving...',
+  //     duration: 3000,
+  //     dismissOnPageChange: true
+  //   }).present();
+  //   this.navCtrl.setRoot('AddformsPage');
+  // }
 
 }

@@ -10,12 +10,17 @@
       </button>
     </ion-buttons>
   </ion-navbar>
-  <!-- <ion-item-divider color="fcmb">BENEFICIARY DETAILS</ion-item-divider> -->
+  <!-- <ion-item-divider color="white">GENERAL DETAILS</ion-item-divider> -->
 
 </ion-header>
 
 
 <ion-content padding>
+
+  <ion-item-group>
+<div class="general">
+      <span no-lines color="fcmb" text-color="my-custom-color">GENERAL DETAILS</span>
+    </div>
 
   <div>
     <ion-item style="color:white" no-lines class="item1">
@@ -106,9 +111,10 @@
 
 
     <div class="button">
-        <button ion-button block tappable color="fcmb2" (click)="submitForma()">
-          <span style="font-weight:bold; color:white">SUBMIT</span>
+        <button ion-button block tappable color="fcmb2" (click)="next()">
+          <span style="font-weight:bold; color:white">NEXT</span>
         </button>
         </div>
+      </ion-item-group>
 
 </ion-content>

@@ -52,11 +52,11 @@ export class FormaPage {
    
   }
 
-  async getUsernameFromStorage(){
-    this.store.get('username').then((val) => {
-      this.username = val;
-    });
-  }
+  // async getUsernameFromStorage(){
+  //   this.store.get('username').then((val) => {
+  //     this.username = val;
+  //   });
+  // }
 
   selectCancel() {
     this.viewCtrl.dismiss('');
@@ -92,11 +92,17 @@ export class FormaPage {
 
    
     
-    this.server.processData(body, '/getForma2.json').then((data) => {
+    this.server.processData(body, '/PostForma').then((data) => {
       console.log(data);
     }).catch((err) => {
       console.log(err)
-    })
+    });
+
+    this.loadingCtrl.create({
+          content: 'Saving...',
+          duration: 3000,
+          dismissOnPageChange: true
+        }).present();
   }
 
 
