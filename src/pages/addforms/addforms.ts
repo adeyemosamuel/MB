@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { ModalController } from 'ionic-angular/components/modal/modal-controller';
 import { ServerServiceProvider } from '../../providers/server-service/server-service';
-import { Storage } from '@ionic/storage';
 import { LoadingController } from 'ionic-angular/components/loading/loading-controller';
 
 
@@ -20,61 +19,42 @@ export class AddformsPage {
   constructor(public navCtrl: NavController, 
     private modalCtrl: ModalController, 
     public navParams: NavParams,
-    private store: Storage,
     private loadingCtrl: LoadingController,
     private server: ServerServiceProvider) {
   }
 
   ionViewDidLoad() {
 
-this.getFormAdetails();
-    //temporal
-  //  this.getFormaFromStorage();
-  //  this.getFormRemittanceFromStorage();
+// this.getFormAdetails();
+  
   }
 
-  //temporal function
 
-  // getFormaFromStorage() {
-  //   this.store.get('addforms').then((val) => {
-  //     this.FormArray = val;
-
+  // async getFormAdetails() {
+  //   let loader = this.loadingCtrl.create({
+  //     spinner: "circles",
+  //     content: 'Please wait....',
+  //     duration:100
   //   });
-  // }
+  //   loader.present();
 
-  //temporal function
+  //   let body = {
+  //     username: 'Samuel',
+  //   };
 
-  // getFormRemittanceFromStorage() {
-  //   this.store.get('addforms').then((val) => {
-  //     this.FormRemittance = val;
-  //   });
-  // }
+  //   try {
+  //     let response = await this.server.processData(body, '/getFormAdetails');
+  //     console.log(response);
+  //     this.FormArray = response;
 
-  async getFormAdetails() {
-    let loader = this.loadingCtrl.create({
-      spinner: "circles",
-      content: 'Please wait....',
-      duration:100
-    });
-    loader.present();
+  //   } catch (err) {
+  //     console.log(err);
+  //   }
 
-    let body = {
-      username: 'Samuel',
-    };
-
-    try {
-      let response = await this.server.processData(body, '/getFormAdetails');
-      console.log(response);
-      this.FormArray = response;
-
-    } catch (err) {
-      console.log(err);
-    }
-
-    loader.dismiss();
+  //   loader.dismiss();
    
 
-  }
+  // }
 
  
 

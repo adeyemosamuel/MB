@@ -1,0 +1,71 @@
+page-forma2 {
+
+    ion-content {
+        background-color: rgba(92,38,132,1) !important;
+    }
+
+    .item1{
+        border: 1px solid #ffb822;
+        background-color: rgba(255,184,34,0.75);
+    }
+
+    .item2{
+        border: 1px solid #ffb822;
+        margin-top:20px;
+        background-color: rgba(255,184,34,0.75);
+    }
+
+    .item3{
+        border: 1px solid #ffb822;
+        margin-top:20px;
+        background-color: rgba(255,184,34,0.75);
+    }
+
+    .item4{
+        border: 1px solid #ffb822;
+        margin-top:20px;
+        background-color: rgba(255,184,34,0.75);
+    }
+
+
+    .item5{
+        border: 1px solid #ffb822;
+        margin-top:20px;
+        margin-bottom: 20px;
+        background-color: rgba(255,184,34,0.75);
+    }
+
+    .item6{
+        border: 1px solid #ffb822;
+        margin-top:20px;
+        background-color: rgba(255,184,34,0.75);
+    }
+
+    [text-color="my-custom-color"] {
+        color: #ffb822;
+    }
+
+    [text-color="my-custom-color2"] {
+        color: #ffffff;
+    }
+
+    .beneficiary{
+        margin-bottom: 10px; 
+    }
+    .countries{
+        margin-top: 10px;
+    }
+
+    .Select{
+        max-width: 100% !important;
+        width:100% !important
+        }
+
+        .payment{
+            margin-top: 20px;
+        }
+
+        .button{
+            margin-top: 20px;
+        }
+}

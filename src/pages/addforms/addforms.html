@@ -3,10 +3,7 @@
 
   <ion-navbar color="fcmb">
     <ion-title text-center><span text-color="my-custom-color">RETAIL</span></ion-title>
-    <!-- <ion-toolbar >  -->
-         
-    
-      <!-- </ion-toolbar> -->
+
   </ion-navbar>
 <ion-toolbar color="fcmb" > 
   <ion-segment  [(ngModel)]="forms">
@@ -30,19 +27,17 @@
 <div [ngSwitch]="forms">
     <ion-list *ngSwitchCase="'a'">
 
-      <ion-item no-lines *ngFor="let a of FormArray">
-          <h2 text-uppercase style="white-space:normal">Name:{{a.name}}</h2>
-          <p style="white-space:normal" >Address:{{a.address}}</p>
-          <!-- <span style="color:orange">STATUS:{{a.status}}</span> -->
+      <ion-item no-lines>
+          <!-- <h2 text-uppercase style="white-space:normal">Name:{{a.name}}</h2>
+          <p style="white-space:normal" >Address:{{a.address}}</p> -->
       </ion-item>
-    </ion-list>
-
+    </ion-list>   
 
     <ion-list *ngSwitchCase="'remittance'"> 
-      <ion-item no-lines *ngFor="let r of FormRemittance">
-          <h2 text-uppercase style="white-space:normal">Name:{{r.name}}</h2>
-          <p style="white-space:normal" >Address:{{r.name}}</p>
-          <!-- <span style="color:orange">STATUS:{{r.status}}</span> -->
+      <ion-item no-lines >
+          <!-- <h2 text-uppercase style="white-space:normal">Name:{{r.name}}</h2>
+          <p style="white-space:normal" >Address:{{r.name}}</p> -->
+         
       </ion-item>
     </ion-list>
 

@@ -10,7 +10,7 @@
       </button>
     </ion-buttons>
   </ion-navbar>
-  <!-- <ion-item-divider color="white">GENERAL DETAILS</ion-item-divider> -->
+
 
 </ion-header>
 
@@ -19,7 +19,7 @@
 
   <ion-item-group>
 <div class="general">
-      <span no-lines color="fcmb" text-color="my-custom-color">GENERAL DETAILS</span>
+      <h4 no-lines color="fcmb" text-color="my-custom-color">GENERAL DETAILS</h4>
     </div>
 
   <div>
@@ -75,7 +75,29 @@
     </ion-item>
   </div>
 
+  <div>
+    <ion-item style="color:white" no-lines class="item7">
+      <ion-input placeholder="*Email" [(ngModel)]="email" type="text"></ion-input>
+    </ion-item>
+  </div>
 
+  <div>
+    <ion-item style="color:white" no-lines class="item7">
+      <ion-input placeholder="Post Code" [(ngModel)]="postcode" type="number"></ion-input>
+    </ion-item>
+  </div>
+
+  <div>
+    <ion-item style="color:white" no-lines class="item7">
+      <ion-input placeholder="Airline" [(ngModel)]="airline" type="text"></ion-input>
+    </ion-item>
+  </div>
+
+  <div>
+    <ion-item style="color:white" no-lines class="item7">
+      <ion-input placeholder="Air Ticket No" [(ngModel)]="ticket" type="text"></ion-input>
+    </ion-item>
+  </div>
 
   <div>
     <ion-item style="color:white" no-lines class="item7">
@@ -99,15 +121,15 @@
 
   <div>
       <ion-item style="color:white" no-lines class="item9">
-        <ion-input placeholder="*Identification Number" [(ngModel)]="idnumber" type="number"></ion-input>
+        <ion-input placeholder="*Identification Number" [(ngModel)]="idnumber" type="text"></ion-input>
       </ion-item>
     </div>
 
-    <div>
+    <!-- <div>
         <ion-item style="color:white" no-lines  class="item10">
           <ion-textarea [(ngModel)]="comments" rows="3" placeholder="Enter Comments"></ion-textarea>
         </ion-item> 
-      </div>
+      </div> -->
 
 
     <div class="button">

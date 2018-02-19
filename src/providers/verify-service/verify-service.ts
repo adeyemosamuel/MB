@@ -10,7 +10,7 @@ export class VerifyServiceProvider {
     console.log('Hello VerifyServiceProvider Provider');
   }
 
-  verifyBeforeSubmit(name, address, town, countries, states, phone, route, identification, idnumber, comments): boolean {
+  verifyNext(name, address, town, countries, states, phone,email,postcode, airline,ticket, route, identification, idnumber, comments): boolean {
     if (name == null || name == '') {
       this.errorMessage = 'Name is required'; 
       return false;
@@ -26,13 +26,14 @@ export class VerifyServiceProvider {
       return false;
     }
 
-    if (identification == '' || identification == null) {
-      this.errorMessage = 'Mode of identification is required';
+    if (email == '' || email == null) {
+      this.errorMessage = 'Enter Valid Email Address';
       return false;
     }
 
-    if (route == '' || route == null) {
-      this.errorMessage = 'Fill in the route';
+  
+    if (identification == '' || identification == null) {
+      this.errorMessage = 'Mode of identification is required';
       return false;
     }
 
@@ -56,14 +57,59 @@ export class VerifyServiceProvider {
       return false;
     }
 
-    if (comments == '' || comments == null) {
-      this.errorMessage = 'Enter Comments';
+    return true;
+  }
+
+  verifyNext2(bname,baddress,bphone,baccount,bcountries,bpostcode): boolean{
+    if (bname == null || bname == '') {
+      this.errorMessage = 'Beneficiary name is required'; 
+      return false;
+    }
+
+    if (baddress == null || baddress == '') {
+      this.errorMessage = 'Fill in the address'; 
       return false;
     }
     return true;
   }
 
+  verifyNext3(payment,amount,charge,applied,info,valid,transfer,estimated): boolean{
+    if (payment == null || payment == '') {
+      this.errorMessage = 'Select Purpose of Payment'; 
+      return false;
+    }
+
+    if (amount == null || amount == '') {
+      this.errorMessage = 'Select Amount'; 
+      return false;
+    }
+
+    if (charge == null || charge == '') {
+      this.errorMessage = 'Select Charge Amount'; 
+      return false;
+    }
+
+    if (applied == null || applied == '') {
+      this.errorMessage = 'Enter amount applied in words'; 
+      return false;
+    }
 
 
+    if (valid == null || valid == '') {
+      this.errorMessage = 'Select Valid for Forex'; 
+      return false;
+    }
+
+    if (transfer == null || transfer == '') {
+      this.errorMessage = 'Select Transfer Account'; 
+      return false;
+    }
+
+    if (estimated == null || estimated == '') {
+      this.errorMessage = 'Enter Estimated Debit Amount'; 
+      return false;
+    }
+    return true;
+  }
 
 }

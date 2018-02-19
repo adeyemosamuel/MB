@@ -20,6 +20,10 @@ export class FormremittancePage {
   countries: any;
   states: any;
   phone: any;
+  email: any;
+  postcode: any;
+  airline: any;
+  ticket: any;
   route: any;
   identification: any;
   idnumber: any;
@@ -45,26 +49,18 @@ export class FormremittancePage {
   ionViewDidLoad() {
     this.stateData = this.appdata.getState();
     this.countryData = this.appdata.getCountry();
-    // this.getUsernameFromStorage();
-    
+
   }
-
-  // async getUsernameFromStorage(){
-  //   this.store.get('username').then((val) => {
-  //     this.username = val;
-  //   });
-  // }
-
 
   selectCancel() {
     this.viewCtrl.dismiss('');
   }
 
-  // Submit Form to Backend and save to storage
 
-  SubmitFormRemittance() {
 
-    if (!this.verify.verifyBeforeSubmit(this.name, this.address, this.town, this.countries, this.states, this.phone, this.route, this.identification, this.idnumber, this.comments)) {
+  next() { 
+
+    if (!this.verify.verifyNext(this.name, this.address, this.town, this.countries, this.states, this.phone, this.email, this.postcode, this.airline, this.ticket, this.route, this.identification, this.idnumber, this.comments)) {
       alert(this.verify.errorMessage);
       this.alertCtrl.create({
         subTitle: 'Error',
@@ -73,58 +69,7 @@ export class FormremittancePage {
       return false;
     }
 
-    let body = {
-      name: this.name,
-      address: this.address,
-      town: this.town,
-      countries: this.countries,
-      states: this.states,
-      phone: this.phone,
-      route: this.route,
-      identification: this.identification,
-      idnumber: this.idnumber,
-      comments: this.comments,
-      username: this.username
-    };
-    console.log(body);
-
-    this.server.processData(body, '/PostFormRemittance').then((data) => {
-      console.log(data);
-    }).catch((err) => {
-      console.log(err)
-    });
-
-    this.loadingCtrl.create({
-      content: 'Saving...',
-      duration: 3000,
-      dismissOnPageChange: true
-    }).present();
   }
 
-
-//temporal save
-
-  // submitFormRemittance() {
-  //   let body = {
-  //     name: this.name,
-  //     address: this.address,
-  //     town: this.town,
-  //     countries: this.countries,
-  //     states: this.states,
-  //     phone: this.phone,
-  //     route: this.route,
-  //     identification: this.identification,
-  //     idnumber: this.idnumber,
-  //     comments: this.comments
-  //   };
-  //   this.FormRemittance.push(body);
-  //   this.store.set('addforms', this.FormRemittance );
-  //   this.loadingCtrl.create({
-  //     content: 'Saving...',
-  //     duration: 3000,
-  //     dismissOnPageChange: true
-  //   }).present();
-  //   this.navCtrl.setRoot('AddformsPage');
-  // }
 
 }
