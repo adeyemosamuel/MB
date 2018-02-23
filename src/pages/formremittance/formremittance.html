@@ -1,107 +1,142 @@
-
 <ion-header>
 
   <ion-navbar color="fcmb">
-    <ion-title text-center><span text-color="my-custom-color">REMITTANCE</span></ion-title>
+    <ion-title text-center>
+      <span text-color="my-custom-color">REMITTANCE</span>
+    </ion-title>
     <ion-buttons end>
       <button ion-button (click)="selectCancel()">
         <span text-color="my-custom-color">Cancel</span>
-          </button>
+      </button>
     </ion-buttons>
-  </ion-navbar>
+  </ion-navbar> 
+
 
 </ion-header>
 
 
 <ion-content padding>
+
+  <ion-item-group>
+<div class="general">
+      <h4 no-lines color="fcmb" text-color="my-custom-color">GENERAL DETAILS</h4>
+    </div>
+
+  <div>
+    <ion-item style="color:white" no-lines class="item1">
+      <ion-input placeholder="*Enter Full Name" [(ngModel)]="name" type="text"></ion-input>
+    </ion-item>
+  </div>
+
+  <div>
+    <ion-item style="color:white" no-lines class="item2">
+      <ion-input placeholder="*Address" [(ngModel)]="address" type="text"></ion-input>
+    </ion-item>
+  </div>
+
+  <div>
+    <ion-item style="color:white" no-lines class="item3">
+      <ion-input placeholder="*Town" [(ngModel)]="town" type="text"></ion-input>
+    </ion-item>
+  </div>
+
+  <div class="states">
+      <span text-color="my-custom-color2">*Choose a Country</span>
+    </div>
+  
     <div>
-        <ion-item style="color:white" no-lines class="item1">
-          <ion-input placeholder="*Enter Full Name" [(ngModel)]="name" type="text"></ion-input>
-        </ion-item>
-      </div>
-    
-      <div>
-        <ion-item style="color:white" no-lines class="item2">
-          <ion-input placeholder="*Address" [(ngModel)]="address" type="text"></ion-input>
-        </ion-item>
-      </div>
-    
-      <div>
-        <ion-item style="color:white" no-lines class="item3">
-          <ion-input placeholder="*Town" [(ngModel)]="town" type="text"></ion-input>
-        </ion-item>
-      </div>
-    
-      <div class="states">
-          <span text-color="my-custom-color2">*Choose a Country</span>
+      <ion-item style="color:white" no-lines class="item5">
+        <ion-select class="Select" [(ngModel)]="countries">
+          <ion-option class="option" [value]="c.country" *ngFor="let c of countryData">{{c.country}}</ion-option>
+        </ion-select>
+      </ion-item>
+    </div>
+
+    <!-- *ngIf="countries =='Nigeria'" -->
+
+  <!-- <div class="states"> -->
+    <!-- <span class="states" text-color="my-custom-color2">*Choose a State</span> -->
+  <!-- </div> -->
+
+  <div *ngIf="countries =='Nigeria'" >
+      <span class="states" text-color="my-custom-color2">*Choose a State</span>
+    <ion-item style="color:white" no-lines class="item4">
+      <ion-select class="Select" [(ngModel)]="states">
+        <ion-option *ngFor="let s of stateData">{{s.label}}</ion-option>
+      </ion-select>
+    </ion-item>
+  </div>
+
+ 
+
+  <div>
+    <ion-item style="color:white" no-lines class="item6">
+      <ion-input placeholder="*Phone Number" [(ngModel)]="phone" type="tel"></ion-input>
+    </ion-item>
+  </div>
+
+  <div>
+    <ion-item style="color:white" no-lines class="item7">
+      <ion-input placeholder="*Email" [(ngModel)]="email" type="text"></ion-input>
+    </ion-item>
+  </div>
+
+  <div>
+    <ion-item style="color:white" no-lines class="item7">
+      <ion-input placeholder="Post Code" [(ngModel)]="postcode" type="number"></ion-input>
+    </ion-item>
+  </div>
+
+  <div>
+    <ion-item style="color:white" no-lines class="item7">
+      <ion-input placeholder="Airline" [(ngModel)]="airline" type="text"></ion-input>
+    </ion-item>
+  </div>
+
+  <div>
+    <ion-item style="color:white" no-lines class="item7">
+      <ion-input placeholder="Air Ticket No" [(ngModel)]="ticket" type="text"></ion-input>
+    </ion-item>
+  </div>
+
+  <div>
+    <ion-item style="color:white" no-lines class="item7">
+      <ion-input placeholder="Route" [(ngModel)]="route" type="text"></ion-input>
+    </ion-item>
+  </div>
+
+  <div class="states">
+    <span text-color="my-custom-color2">*Mode of Identification</span>
+  </div>
+  <div>
+    <ion-item style="color:white" no-lines class="item8">
+      <ion-select class="Select" [(ngModel)]="identification">
+        <ion-option value="passport">International Passport</ion-option>
+        <ion-option value="national">National ID Card</ion-option>
+        <ion-option value="driver">Driver's License</ion-option>
+        <ion-option value="voters">Voter's Card</ion-option>
+      </ion-select>
+    </ion-item>
+  </div>
+
+  <div>
+      <ion-item style="color:white" no-lines class="item9">
+        <ion-input placeholder="*Identification Number" [(ngModel)]="idnumber" type="text"></ion-input>
+      </ion-item>
+    </div>
+
+    <!-- <div>
+        <ion-item style="color:white" no-lines  class="item10">
+          <ion-textarea [(ngModel)]="comments" rows="3" placeholder="Enter Comments"></ion-textarea>
+        </ion-item> 
+      </div> -->
+
+
+    <div class="button">
+        <button ion-button block tappable color="fcmb2" (click)="next()">
+          <span style="font-weight:bold; color:white">NEXT</span>
+        </button>
         </div>
-      
-        <div>
-          <ion-item style="color:white" no-lines class="item5">
-            <ion-select class="Select" [(ngModel)]="countries">
-              <ion-option class="option" *ngFor="let c of countryData">{{c.country}}</ion-option>
-            </ion-select>
-          </ion-item>
-        </div>
-    
-      
-    
-      <div *ngIf="countries =='Nigeria'">
-          <span text-color="my-custom-color2">*Choose a State</span>
-        <ion-item style="color:white" no-lines class="item4">
-          <ion-select class="Select" [(ngModel)]="states">
-            <ion-option *ngFor="let s of stateData">{{s.label}}</ion-option>
-          </ion-select>
-        </ion-item>
-      </div>
-    
-     
-    
-      <div>
-        <ion-item style="color:white" no-lines class="item6">
-          <ion-input placeholder="*Phone Number" [(ngModel)]="phone" type="tel"></ion-input>
-        </ion-item>
-      </div>
-    
-    
-    
-      <div>
-        <ion-item style="color:white" no-lines class="item7">
-          <ion-input placeholder="Route" [(ngModel)]="route" type="text"></ion-input>
-        </ion-item>
-      </div>
-    
-      <div class="states">
-        <span text-color="my-custom-color2">*Mode of Identification</span>
-      </div>
-      <div>
-        <ion-item style="color:white" no-lines class="item8">
-          <ion-select class="Select" [(ngModel)]="identification">
-            <ion-option value="passport">International Passport</ion-option>
-            <ion-option value="national">National ID Card</ion-option>
-            <ion-option value="driver">Driver's License</ion-option>
-            <ion-option value="voters">Voter's Card</ion-option>
-          </ion-select>
-        </ion-item>
-      </div>
-    
-      <div>
-          <ion-item style="color:white" no-lines class="item9">
-            <ion-input placeholder="*Identification Number" [(ngModel)]="idnumber" type="number"></ion-input>
-          </ion-item>
-        </div>
-    
-        <div>
-            <ion-item style="color:white" no-lines  class="item10">
-              <ion-textarea [(ngModel)]="comments" rows="3" placeholder="Enter Comments"></ion-textarea>
-            </ion-item>
-          </div>
-    
-    
-        <div class="button">
-            <button ion-button block tappable color="fcmb2" (click)="next()">
-              <span style="font-weight:bold; color:white">SUBMIT</span>
-            </button>
-            </div> 
+      </ion-item-group>
 
 </ion-content>

@@ -1,29 +1,14 @@
-page-forma3 {
+page-rem2 {
     ion-content {
         background-color: rgba(92,38,132,1) !important;
     }
 
-    [text-color="my-custom-color"] {
-        color: #ffb822;
-    }
-
-    [text-color="my-custom-color2"] {
-        color: #ffffff;
-    }
-
     .item1{
         border: 1px solid #ffb822;
-        margin-bottom: 10px;
         background-color: rgba(255,184,34,0.75);
     }
 
     .item2{
-        border: 1px solid #ffb822;
-        margin-bottom: 10px;
-        background-color: rgba(255,184,34,0.75);
-    }
-
-    .item10{
         border: 1px solid #ffb822;
         margin-top:20px;
         background-color: rgba(255,184,34,0.75);
@@ -37,8 +22,37 @@ page-forma3 {
 
     .item4{
         border: 1px solid #ffb822;
-        margin-bottom: 10px;
+        margin-top:20px;
         background-color: rgba(255,184,34,0.75);
+    }
+
+
+    .item5{
+        border: 1px solid #ffb822;
+        margin-top:20px;
+        margin-bottom: 20px;
+        background-color: rgba(255,184,34,0.75);
+    }
+
+    .item6{
+        border: 1px solid #ffb822;
+        margin-top:20px;
+        background-color: rgba(255,184,34,0.75);
+    }
+
+    [text-color="my-custom-color"] {
+        color: #ffb822;
+    }
+
+    [text-color="my-custom-color2"] {
+        color: #ffffff;
+    }
+
+    .beneficiary{
+        margin-bottom: 10px; 
+    }
+    .countries{
+        margin-top: 10px;
     }
 
     .Select{
@@ -46,23 +60,8 @@ page-forma3 {
         width:100% !important
         }
 
-        .option {
-            text-transform: capitalize;
-        }
         .payment{
-            margin-top: 10px;
-        }
-
-        .amount{
-            margin-top: 10px;
-        }
-
-        .valid{
-            margin-top: 10px;
-        }
-
-        .transfer{
-            margin-top: 10px;
+            margin-top: 20px;
         }
 
         .button{

@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, LoadingController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams} from 'ionic-angular';
 import { ViewController } from 'ionic-angular/navigation/view-controller';
 import { AppdataProvider } from '../../providers/appdata/appdata';
 import { ServerServiceProvider } from '../../providers/server-service/server-service';
 import { VerifyServiceProvider } from '../../providers/verify-service/verify-service';
-import { Storage } from '@ionic/storage';
+// import { Storage } from '@ionic/storage';
 import { AlertController } from 'ionic-angular/components/alert/alert-controller';
 import { Http } from '@angular/http';
 
@@ -38,13 +38,13 @@ export class FormremittancePage {
     private appdata: AppdataProvider,
     private viewCtrl: ViewController,
     private verify: VerifyServiceProvider,
-    private loadingCtrl: LoadingController,
+    // private loadingCtrl: LoadingController,
     public http: Http,
-    private store: Storage,
+    // private store: Storage,
     private server: ServerServiceProvider,
     private alertCtrl: AlertController,
     public navParams: NavParams) {
-  }
+  } 
 
   ionViewDidLoad() {
     this.stateData = this.appdata.getState();
@@ -58,17 +58,18 @@ export class FormremittancePage {
 
 
 
-  next() { 
 
-    if (!this.verify.verifyNext(this.name, this.address, this.town, this.countries, this.states, this.phone, this.email, this.postcode, this.airline, this.ticket, this.route, this.identification, this.idnumber, this.comments)) {
-      alert(this.verify.errorMessage);
-      this.alertCtrl.create({
-        subTitle: 'Error',
-        message: this.verify.errorMessage
-      }).present();
-      return false;
-    }
+  next() {
 
+    // if (!this.verify.verifyNext(this.name, this.address, this.town, this.countries, this.states, this.phone, this.email, this.postcode, this.airline, this.ticket, this.route, this.identification, this.idnumber, this.comments)) {
+    //   alert(this.verify.errorMessage);
+    //   this.alertCtrl.create({
+    //     subTitle: 'Message',
+    //     message: this.verify.errorMessage
+    //   }).present();
+    //   return false;
+    // }
+    this.navCtrl.push('Rem2Page');
   }
 
 
