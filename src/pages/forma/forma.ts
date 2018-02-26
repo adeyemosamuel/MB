@@ -33,6 +33,7 @@ export class FormaPage {
   username: any;
   stateData: any = [];
   countryData: any = [];
+  // formdetails: any= {};
   FormArray: Array<any> = [];
 
 
@@ -51,7 +52,7 @@ export class FormaPage {
   ionViewDidLoad() {
     this.stateData = this.appdata.getState();
     this.countryData = this.appdata.getCountry();
-
+    // this.formdetails = this.appdata.getInfo();
   }
 
 

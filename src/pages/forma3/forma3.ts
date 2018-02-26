@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 import { VerifyServiceProvider } from '../../providers/verify-service/verify-service';
+import { AppdataProvider } from '../../providers/appdata/appdata';
 
 
 @IonicPage()
@@ -19,14 +20,16 @@ info: any;
 valid: any;
 transfer: any;
 estimated: any;
+// formdetails: any={};
   constructor(public navCtrl: NavController,
+    private appdata: AppdataProvider, 
     private verify: VerifyServiceProvider,
     private alertCtrl: AlertController,
      public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad Forma3Page');
+    // this.formdetails = this.appdata.getInfo();
   }
 
   next(){

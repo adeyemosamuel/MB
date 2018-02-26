@@ -18,6 +18,7 @@ export class Forma2Page {
   baccount: any;
   bcountries: any;
   bpostcode: any;
+  // formdetails: any={};
   countryData: any = [];
 
   constructor(private appdata: AppdataProvider, 
@@ -28,6 +29,7 @@ export class Forma2Page {
 
   ionViewDidLoad() {
     this.countryData = this.appdata.getCountry();
+    // this.formdetails = this.appdata.getInfo();
   }
 
 

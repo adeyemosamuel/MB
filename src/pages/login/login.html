@@ -38,7 +38,7 @@
     </p>
 
     <div>
-      <button class="button" icon-start ion-button round block tappable color="fcmb2" (click)="Login()">
+      <button [disabled]="!username || !password" [class.disabled]="!username || !password"  class="button" icon-start ion-button round block tappable color="fcmb2" (click)="Login()">
         <!-- <ion-icon name="log-in"></ion-icon> -->
         <span style="font-weight:bold; color:white"> LOG IN</span>
       </button>

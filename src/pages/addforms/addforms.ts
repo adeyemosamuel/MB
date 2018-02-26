@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { ModalController } from 'ionic-angular/components/modal/modal-controller';
 import { ServerServiceProvider } from '../../providers/server-service/server-service';
 import { LoadingController } from 'ionic-angular/components/loading/loading-controller';
+import { AppdataProvider } from '../../providers/appdata/appdata';
 
 
 @IonicPage()
@@ -13,10 +14,17 @@ import { LoadingController } from 'ionic-angular/components/loading/loading-cont
 export class AddformsPage {
 
   forms = "a";
+  name:any;
+  formnumber:any;
+  status:any;
+  date:any;
+  item:any;
+  // FormArray: any= {};
   FormArray: Array<any> = [];
   FormRemittance: Array<any> = [];
 
-  constructor(public navCtrl: NavController, 
+  constructor(public navCtrl: NavController,
+    private appdata: AppdataProvider, 
     private modalCtrl: ModalController, 
     public navParams: NavParams,
     private loadingCtrl: LoadingController,
@@ -24,8 +32,9 @@ export class AddformsPage {
   }
 
   ionViewDidLoad() {
-
-// this.getFormAdetails();
+    this.FormArray= this.appdata.getInfo();
+    this.FormRemittance= this.appdata.getInfo();
+    console.log(this.FormArray);
   
   }
 
@@ -80,6 +89,12 @@ export class AddformsPage {
     if(event.direction === 4) {
       this.navCtrl.parent.select(1);
     }
+  }
+
+  itemTapped(item){
+    this.navCtrl.push('RetaildetailsPage', {
+      item: item 
+    });
   }
 
 }
