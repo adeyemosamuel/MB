@@ -20,7 +20,9 @@ import { VerifyServiceProvider } from '../providers/verify-service/verify-servic
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp),
+    IonicModule.forRoot(MyApp, {
+      tabsHideOnSubPages:true,
+    }),
     HttpModule,
     HttpClientModule,
     IonicStorageModule.forRoot(),

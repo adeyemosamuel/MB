@@ -1,18 +1,131 @@
-<!--
-  Generated template for the RetaildetailsPage page.
 
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>retaildetails</ion-title>
+  <ion-navbar color="fcmb">
+      <ion-title text-center>
+          <span text-color="my-custom-color">RETAIL</span>
+        </ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
+
+
+    <ion-item-group>
+        <div class="general">
+              <h4 no-lines color="fcmb" text-color="my-custom-color">GENERAL DETAILS</h4>
+            </div>
+        
+          <div>
+            <ion-item style="color:white" no-lines class="item1">
+              <ion-input placeholder="*Enter Full Name" [ngModel]="selectedItem?.name" (ngModelChange)="selectedItem.name = $event"  type="text"></ion-input>
+            </ion-item>
+          </div>
+        
+          <div> 
+            <ion-item style="color:white" no-lines class="item2">
+              <ion-input placeholder="*Address" [ngModel]="selectedItem?.address" (ngModelChange)="selectedItem.address = $event" type="text"></ion-input>
+            </ion-item>
+          </div>
+        
+          <div>
+            <ion-item style="color:white" no-lines class="item3">
+              <ion-input placeholder="*Town" [ngModel]="selectedItem?.town" (ngModelChange)="selectedItem.town= $event" type="text"></ion-input>
+            </ion-item>
+          </div> 
+        
+          <!-- <div class="states">
+              <span text-color="my-custom-color2">*Choose a Country</span>
+            </div>
+          
+            <div>
+              <ion-item style="color:white" no-lines class="item5">
+                <ion-select class="Select" [(ngModel)]="countries">
+                  <ion-option class="option" [value]="c.country" *ngFor="let c of countryData">{{c.country}}</ion-option>
+                </ion-select>
+              </ion-item>
+            </div> -->
+        
+            <!-- *ngIf="countries =='Nigeria'" -->
+        
+          <!-- <div class="states"> -->
+            <!-- <span class="states" text-color="my-custom-color2">*Choose a State</span> -->
+          <!-- </div> -->
+        
+          <!-- <div *ngIf="countries =='Nigeria'" >
+              <span class="states" text-color="my-custom-color2">*Choose a State</span>
+            <ion-item style="color:white" no-lines class="item4">
+              <ion-select class="Select" [(ngModel)]="states">
+                <ion-option *ngFor="let s of stateData">{{s.label}}</ion-option>
+              </ion-select>
+            </ion-item>
+          </div> -->
+        
+         
+<div>
+            <ion-item style="color:white" no-lines class="item6">
+              <ion-input placeholder="*Phone Number" [ngModel]="selectedItem?.phone" (ngModelChange)="selectedItem.phone = $event" type="tel"></ion-input>
+            </ion-item>
+          </div>
+        
+          <div>
+            <ion-item style="color:white" no-lines class="item7">
+              <ion-input placeholder="*Email" [ngModel]="selectedItem?.email" (ngModelChange)="selectedItem.email = $event" type="text"></ion-input>
+            </ion-item>
+          </div>
+        
+          <div>
+            <ion-item style="color:white" no-lines class="item7">
+              <ion-input placeholder="Post Code" [ngModel]="selectedItem?.postcode" (ngModelChange)="selectedItem.postcode = $event" type="number"></ion-input>
+            </ion-item>
+          </div>
+        
+          <div>
+            <ion-item style="color:white" no-lines class="item7">
+              <ion-input placeholder="Airline" [ngModel]="selectedItem?.airline" (ngModelChange)="selectedItem.airline = $event" type="text"></ion-input>
+            </ion-item>
+          </div>
+        
+          <div>
+            <ion-item style="color:white" no-lines class="item7">
+              <ion-input placeholder="Air Ticket No" [ngModel]="selectedItem?.ticket" (ngModelChange)="selectedItem.ticket= $event" type="text"></ion-input>
+            </ion-item>
+          </div>
+        
+          <div>
+            <ion-item style="color:white" no-lines class="item7">
+              <ion-input placeholder="Route"[ngModel]="selectedItem?.route" (ngModelChange)="selectedItem.route = $event" type="text"></ion-input>
+            </ion-item>
+          </div>
+        
+          <!-- <div class="states">
+            <span text-color="my-custom-color2">*Mode of Identification</span>
+          </div>
+          <div>
+            <ion-item style="color:white" no-lines class="item8">
+              <ion-select class="Select" [(ngModel)]="selectedItem.identification">
+                <ion-option value="passport">International Passport</ion-option>
+                <ion-option value="national">National ID Card</ion-option>
+                <ion-option value="driver">Driver's License</ion-option>
+                <ion-option value="voters">Voter's Card</ion-option>
+              </ion-select>
+            </ion-item>
+          </div> -->
+        
+          <div>
+              <ion-item style="color:white" no-lines class="item9">
+                <ion-input placeholder="*Identification Number" [ngModel]="selectedItem?.idnumber" (ngModelChange)="selectedItem.idnumber= $event" type="text"></ion-input>
+              </ion-item>
+            </div>
+         
+          
+            <div class="button">
+                <button ion-button block tappable color="fcmb2" (click)="next()">
+                  <span style="font-weight:bold; color:white">NEXT</span>
+                </button>
+                </div>
+              </ion-item-group>
 
 </ion-content>

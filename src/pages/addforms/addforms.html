@@ -27,7 +27,7 @@
     <!-- Segment Switchcase -->
     <div [ngSwitch]="forms">
       <ion-list  *ngSwitchCase="'a'">
-          <div (click)="itemTapped(item)" [ngClass]="f.status"  class="general"  *ngFor="let f of FormArray">
+          <div (click)="itemTapped(f)" [ngClass]="f.status"  class="general"  *ngFor="let f of FormArray">
             <h5>Beneficiary:{{f.name}}</h5>
             <h6>Form Number:{{f.formnumber}}</h6>
             <span>Created On:{{f.date}}</span>

@@ -18,7 +18,8 @@ export class AddformsPage {
   formnumber:any;
   status:any;
   date:any;
-  item:any;
+  f:any;
+  selectedItem: any;
   // FormArray: any= {};
   FormArray: Array<any> = [];
   FormRemittance: Array<any> = [];
@@ -91,9 +92,9 @@ export class AddformsPage {
     }
   }
 
-  itemTapped(item){
+  itemTapped(f,title){
     this.navCtrl.push('RetaildetailsPage', {
-      item: item 
+      f:f
     });
   }
 

@@ -1,5 +1,7 @@
 //General Details
 
+[disabled]="!username || !password" [class.disabled]="!username || !password"  
+
 name 
 address 
 town 
