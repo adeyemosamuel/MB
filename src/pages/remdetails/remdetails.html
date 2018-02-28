@@ -1,11 +1,11 @@
 
 <ion-header>
 
-  <ion-navbar color="fcmb">
-      <ion-title text-center>
-          <span text-color="my-custom-color">FORM A</span>
-        </ion-title>
-  </ion-navbar>
+    <ion-navbar color="fcmb">
+        <ion-title text-center>
+            <span text-color="my-custom-color">REMITTANCE</span>
+          </ion-title>
+    </ion-navbar>
 
 </ion-header>
 
@@ -50,9 +50,9 @@
         
             <!-- *ngIf="countries =='Nigeria'" -->
         
-          <!-- <div class="states">
-            <span class="states" text-color="my-custom-color2">*Choose a State</span>
-          </div> -->
+          <!-- <div class="states"> -->
+            <!-- <span class="states" text-color="my-custom-color2">*Choose a State</span> -->
+          <!-- </div> -->
         
           <div *ngIf="selectedItem?.countries =='Nigeria'" >
               <span class="states" text-color="my-custom-color2">*Choose a State</span>
@@ -96,21 +96,21 @@
         
           <div>
             <ion-item style="color:white" no-lines class="item7">
-              <ion-input placeholder="Route" [ngModel]="selectedItem?.route" (ngModelChange)="selectedItem.route = $event" type="text"></ion-input>
+              <ion-input placeholder="Route"[ngModel]="selectedItem?.route" (ngModelChange)="selectedItem.route = $event" type="text"></ion-input>
             </ion-item>
           </div>
         
           <div class="states">
-            <span text-color="my-custom-color2">*Mode of Identification</span>
-          </div>
-          <div>
-            <ion-item style="color:white" no-lines class="item8">
-              <ion-select class="Select" [ngModel]="selectedItem?.identification" (ngModelChange)="selectedItem.identification=$event">
-                  <ion-option *ngFor="let m of iData">{{m.mode}}</ion-option>
-                
-              </ion-select>
-            </ion-item>
-          </div>
+              <span text-color="my-custom-color2">*Mode of Identification</span>
+            </div>
+            <div>
+              <ion-item style="color:white" no-lines class="item8">
+                <ion-select class="Select" [ngModel]="selectedItem?.identification" (ngModelChange)="selectedItem.identification=$event">
+                    <ion-option *ngFor="let m of iData">{{m.mode}}</ion-option>
+                  
+                </ion-select>
+              </ion-item>
+            </div>
         
           <div>
               <ion-item style="color:white" no-lines class="item9">
@@ -124,6 +124,6 @@
                   <span style="font-weight:bold; color:white">NEXT</span>
                 </button>
                 </div>
-              </ion-item-group> 
+              </ion-item-group>
 
 </ion-content>

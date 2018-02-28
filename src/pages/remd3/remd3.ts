@@ -5,23 +5,24 @@ import { AppdataProvider } from '../../providers/appdata/appdata';
 
 @IonicPage()
 @Component({
-  selector: 'page-rd3',
-  templateUrl: 'rd3.html',
+  selector: 'page-remd3',
+  templateUrl: 'remd3.html',
 })
-export class Rd3Page {
+export class Remd3Page {
+
   selectedItem3: any;
   selectedItem2: any;
   id: number;
   purposeData:any = [];
 amountData: any =[];
 chargeData: any= []; 
-accountData: any=[]; 
+accountData: any=[];
 
-  constructor(public navCtrl: NavController,
+  constructor(public navCtrl: NavController, 
     private appdata: AppdataProvider,
-     public navParams: NavParams) {
+    public navParams: NavParams) {
   }
- 
+
   ionViewDidLoad() {
     this.purposeData= this.appdata.getPurpose();
     this.amountData= this.appdata.getAmount();
@@ -32,7 +33,7 @@ accountData: any=[];
   }
 
   next(){
-    this.navCtrl.push('Rd4Page', {
+    this.navCtrl.push('Remd4Page', {
       selectedItem3:this.selectedItem3,
       
     });

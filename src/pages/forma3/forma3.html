@@ -13,7 +13,7 @@
 <ion-content padding>
 
   <ion-item-group>
-   <div class="details">
+   <div class="details"> 
     <h4 no-lines color="fcmb" text-color="my-custom-color">PAYMENT DETAILS</h4>
   </div>
 
@@ -25,7 +25,7 @@
       <div> 
         <ion-item style="color:white" no-lines class="item1">
           <ion-select class="Select" [(ngModel)]="payment">
-            <ion-option class="option" [value]="p.payment" *ngFor="let p of paymentData">{{p.payment}}</ion-option>
+            <ion-option class="option" [value]="p.purpose" *ngFor="let p of purposeData">{{p.purpose}}</ion-option>
           </ion-select>
         </ion-item>
       </div> 
@@ -34,7 +34,7 @@
       <div class="amount">
           <span text-color="my-custom-color2">*Amount</span>
         </div>
-      
+       
         <div> 
           <ion-item style="color:white" no-lines class="item2">
             <ion-select class="Select" [(ngModel)]="amount">
@@ -87,7 +87,7 @@
         <div> 
           <ion-item style="color:white" no-lines class="item1">
             <ion-select class="Select" [(ngModel)]="transfer">
-              <ion-option class="option" [value]="t.transfer" *ngFor="let t of transferData">{{t.transfer}}</ion-option>
+              <ion-option class="option" [value]="a.account" *ngFor="let a of accountData">{{a.account}}</ion-option>
             </ion-select>
           </ion-item> 
         </div>

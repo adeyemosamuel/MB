@@ -24,13 +24,14 @@ export class FormaPage {
   phone: any;
   email: any;
   postcode: any;
-  airline: any;
+  airline: any; 
   ticket: any;
   route: any;
   identification: any;
   idnumber: any;
   comments: any;
   username: any;
+  iData: any = [];
   stateData: any = [];
   countryData: any = [];
   // formdetails: any= {};
@@ -47,11 +48,12 @@ export class FormaPage {
     private alertCtrl: AlertController,
     // private loadingCtrl: LoadingController,
     public navParams: NavParams) {
-  }
+  } 
 
   ionViewDidLoad() {
     this.stateData = this.appdata.getState();
     this.countryData = this.appdata.getCountry();
+    this.iData= this.appdata.getID();
     // this.formdetails = this.appdata.getInfo();
   }
 

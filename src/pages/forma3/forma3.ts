@@ -20,6 +20,10 @@ info: any;
 valid: any;
 transfer: any;
 estimated: any;
+purposeData:any = [];
+amountData: any =[];
+chargeData: any= []; 
+accountData: any=[];
 // formdetails: any={};
   constructor(public navCtrl: NavController,
     private appdata: AppdataProvider, 
@@ -28,8 +32,12 @@ estimated: any;
      public navParams: NavParams) {
   }
 
-  ionViewDidLoad() {
+  ionViewDidLoad() { 
     // this.formdetails = this.appdata.getInfo();
+    this.purposeData= this.appdata.getPurpose();
+    this.amountData= this.appdata.getAmount();
+    this.chargeData= this.appdata.getCharge();
+    this.accountData= this.appdata.getAccount();
   }
 
   next(){

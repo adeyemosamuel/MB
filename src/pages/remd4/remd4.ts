@@ -4,10 +4,11 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 @IonicPage()
 @Component({
-  selector: 'page-rd4',
-  templateUrl: 'rd4.html',
+  selector: 'page-remd4',
+  templateUrl: 'remd4.html',
 })
-export class Rd4Page {
+export class Remd4Page {
+
   selectedItem4: any;
   selectedItem3: any;
   id: number; 

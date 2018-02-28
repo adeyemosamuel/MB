@@ -34,7 +34,7 @@ export class AddformsPage {
 
   ionViewDidLoad() {
     this.FormArray= this.appdata.getInfo();
-    this.FormRemittance= this.appdata.getInfo();
+    this.FormRemittance= this.appdata.getMoney();
     console.log(this.FormArray);
   
   }
@@ -92,9 +92,15 @@ export class AddformsPage {
     }
   }
 
-  itemTapped(f,title){
+  itemTapped(f){
     this.navCtrl.push('RetaildetailsPage', {
       f:f
+    });
+  }
+
+  itemTapped2(r){
+    this.navCtrl.push('RemdetailsPage', {
+      r:r
     });
   }
 

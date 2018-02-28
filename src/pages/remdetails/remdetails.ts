@@ -2,42 +2,38 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { AppdataProvider } from '../../providers/appdata/appdata';
 
-
 @IonicPage()
 @Component({
-  selector: 'page-retaildetails',
-  templateUrl: 'retaildetails.html',
+  selector: 'page-remdetails',
+  templateUrl: 'remdetails.html',
 })
-export class RetaildetailsPage {
- 
+export class RemdetailsPage {
+
   selectedItem: any;
   id: number;
   f: any;
   iData: any = [];
   stateData: any = [];
   countryData: any = [];
-  
 
   constructor(public navCtrl: NavController,
     private appdata: AppdataProvider,
      public navParams: NavParams) {
-   
   }
 
   ionViewDidLoad() {
     this.stateData = this.appdata.getState();
     this.countryData = this.appdata.getCountry();
     this.iData= this.appdata.getID();
-    this.selectedItem= this.navParams.get('f');
-    console.log(this.navParams.get('f'));
+    this.selectedItem= this.navParams.get('r');
+    console.log(this.navParams.get('r'));
     
-  }
+  } 
 
   next(){
-    this.navCtrl.push('Rd2Page', {
+    this.navCtrl.push('Remd2Page', {
       selectedItem:this.selectedItem,
       
     });
   }
-
 }

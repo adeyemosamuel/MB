@@ -3,11 +3,11 @@
 
     <ion-navbar color="fcmb">
         <ion-title text-center>
-          <span text-color="my-custom-color">RETAIL</span>
+          <span text-color="my-custom-color">FORM A</span>
         </ion-title>
     </ion-navbar>
 
-</ion-header>
+</ion-header> 
 
 
 <ion-content padding>
@@ -17,43 +17,43 @@
          <h4 no-lines color="fcmb" text-color="my-custom-color">PAYMENT DETAILS</h4>
        </div>
      
-<!--          
+     
            <div class="payment">
              <span text-color="my-custom-color2">*Purpose of Payment</span>
            </div>
          
            <div> 
              <ion-item style="color:white" no-lines class="item1">
-               <ion-select class="Select" [(ngModel)]="payment">
-                 <ion-option class="option" [value]="p.payment" *ngFor="let p of paymentData">{{p.payment}}</ion-option>
+               <ion-select class="Select" [ngModel]="selectedItem3?.purpose" (ngModelChange)="selectedItem3.purpose=$event">
+                 <ion-option class="option" [value]="p.purpose" *ngFor="let p of purposeData">{{p.purpose}}</ion-option>
                </ion-select>
              </ion-item>
-           </div>  -->
+           </div>
      
      
-           <!-- <div class="amount">
+           <div class="amount">
                <span text-color="my-custom-color2">*Amount</span>
              </div>
            
              <div> 
                <ion-item style="color:white" no-lines class="item2">
-                 <ion-select class="Select" [(ngModel)]="amount">
+                 <ion-select class="Select"  [ngModel]="selectedItem3?.amount" (ngModelChange)="selectedItem3.amount=$event">
                    <ion-option class="option" [value]="a.amount" *ngFor="let a of amountData">{{a.amount}}</ion-option>
                  </ion-select>
                </ion-item>
-             </div>  -->
+             </div> 
      
-             <!-- <div class="charge">
+             <div class="charge">
                  <span text-color="my-custom-color2">*Charge Amount</span>
                </div>
              
                <div> 
                  <ion-item style="color:white" no-lines class="item2">
-                   <ion-select class="Select" [(ngModel)]="charge">
+                   <ion-select class="Select"  [ngModel]="selectedItem3?.charge" (ngModelChange)="selectedItem3.charge=$event">
                      <ion-option class="option" [value]="c.charge" *ngFor="let c of chargeData">{{c.charge}}</ion-option>
                    </ion-select>
                  </ion-item>
-               </div> -->
+               </div>
      
                <div>
                    <ion-item style="color:white" no-lines class="item3">
@@ -68,29 +68,29 @@
            </div>
      
      
-           <!-- <div class="valid">
+           <div class="valid">
                <span text-color="my-custom-color2">*Valid for Forex</span>
              </div>
          <div>
            <ion-item style="color:white" no-lines class="item4">
-               <ion-select class="Select" [(ngModel)]="valid">
+               <ion-select class="Select"  [ngModel]="selectedItem3?.valid" (ngModelChange)="selectedItem3.valid=$event">
                  <ion-option value="yes">Yes</ion-option>
                  <ion-option value="no">No</ion-option>
                 </ion-select>
              </ion-item>
-           </div> -->
+           </div>
      
-           <!-- <div class="transfer">
+           <div class="transfer">
                <span text-color="my-custom-color2">*Transfer Account</span>
              </div>
            
              <div> 
                <ion-item style="color:white" no-lines class="item1">
-                 <ion-select class="Select" [(ngModel)]="transfer">
-                   <ion-option class="option" [value]="t.transfer" *ngFor="let t of transferData">{{t.transfer}}</ion-option>
+                 <ion-select class="Select"  [ngModel]="selectedItem3?.account" (ngModelChange)="selectedItem3.account=$event">
+                   <ion-option class="option" [value]="a.account" *ngFor="let a of accountData">{{a.account}}</ion-option>
                  </ion-select>
                </ion-item> 
-             </div> -->
+             </div>
      
              <div>
                  <ion-item style="color:white" no-lines class="item3">

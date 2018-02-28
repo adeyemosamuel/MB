@@ -9,6 +9,62 @@ export class AppdataProvider {
         console.log('Hello AppdataProvider Provider');
     }
 
+    getID(): any{
+        let data=[
+            {"mode":"International Passport"},
+            {"mode":"Driver's License"},
+            {"mode":"National ID Card"},
+            {"mode":"Voter's Card"},
+            {"mode":"Resident Permit"}
+        ];
+        return data;
+    }
+
+
+    getPurpose(): any{
+        let data=[
+            {"purpose":"Shipment of A"},
+            {"purpose":"Shipment of B"},
+            {"purpose":"Shipment of C"},
+            {"purpose":"Shipment of D"},
+            {"purpose":"Shipment of E"}
+        ];
+        return data;
+    }
+
+    getAmount(): any{
+        let data=[
+            {"amount":"$1000"},
+            {"amount":"$1100"},
+            {"amount":"$1200"},
+            {"amount":"$1300"},
+            {"amount":"$1400"}
+        ];
+        return data;
+    }
+
+    getCharge(): any{
+        let data=[
+            {"charge":"$100"},
+            {"charge":"$110"},
+            {"charge":"$120"},
+            {"charge":"$130"},
+            {"charge":"$140"}
+        ];
+        return data;
+    }
+
+    getAccount(): any{
+        let data=[
+            {"account":"Barclays"},
+            {"account":"Swiss"},
+            {"account":"American Express"},
+            {"account":"Paypal"},
+            {"account":"City Bank"}
+        ];
+        return data;
+    }
+
     getCountry(): any {
         let data = [
             { "country": "Nigeria" },
@@ -703,6 +759,295 @@ export class AppdataProvider {
                 "bcountries": "Canada",
                 "bpostcode": "5012843",
                 "ibname":"Ismail Olabode",
+                "ibswiftcode":"2345163663526",
+                "ibaddress": "9, Isale Eko Street, Idumota, Lagos",
+                "ibcity":"Idumota",
+                "ibstate":"Lagos",
+                "ibpostalcode": "10112342",
+                "bbname": "Agboola Blessing",
+                "bbaddress":"Block C, Plot 4, Obasanjo Road, Abuja",
+                "bbcity":"Abuja",
+                "bbcountry":"Nigeria",
+                "bbswiftcode":"245273456235",
+                "bbstate":"Abuja",
+                "bbpostalcode":"10011232",
+                "payment":"Shipment of A",
+                "amount":"$5,000",
+                "charge": "$1,045",
+                "applied": "Five thousand US Dollars",
+                "info": "FCMB International Trade. Tell me more",
+                "valid":"null",
+                "transfer": "null",
+                "estimated": "$1,200",
+                "formnumber": "321456789325",
+                "status":"Submitted",
+                "date":"21/02/18"
+
+            }
+
+
+
+
+        ];
+
+        return data;
+
+    }
+
+
+
+    getMoney(): any {
+
+        let data = [
+            {
+                "id":"1",
+                "name": "Janet Peace O.",
+                "address": "7, Obalende Street, off Agege Road",
+                "town": "Oshodi",
+                "phone": "08170087989",
+                "email": "trade@fcmb.com",
+                "postcode": "101011",
+                "airline": "British Airways",
+                "ticket": "BA-260218-123456",
+                "route": "Off Agege road",
+                "idnumber": "A234567890",
+                "comments": "I love this app",
+                "bname": "Iyanu Badmus",
+                "baddress":"5, Joel Ogunsola, Ikeja",
+                "bphone":"07032453245",
+                "baccount": "0017674230",
+                "bcountries": "Canada",
+                "bpostcode": "5012843",
+                "ibname":"Ismail Olabode",
+                "ibswiftcode":"2345163663526",
+                "ibaddress": "9, Isale Eko Street, Idumota, Lagos",
+                "ibcity":"Idumota",
+                "ibstate":"Lagos",
+                "ibpostalcode": "10112342",
+                "bbname": "Agboola Blessing",
+                "bbaddress":"Block C, Plot 4, Obasanjo Road, Abuja",
+                "bbcity":"Abuja",
+                "bbcountry":"Nigeria",
+                "bbswiftcode":"245273456235",
+                "bbstate":"Abuja",
+                "bbpostalcode":"10011232",
+                "payment":"Shipment of A",
+                "amount":"$5,000",
+                "charge": "$1,045",
+                "applied": "Five thousand US Dollars",
+                "info": "FCMB International Trade. Tell me more",
+                "valid":"null",
+                "transfer": "null",
+                "estimated": "$1,200",
+                "formnumber": "321456789320",
+                "status":"Approved",
+                "date":"26/02/18"
+
+            },
+
+            {
+                "id":"2",
+                "name": "Okoro Azeez Olusegun",
+                "address": "7, Onitsha Street, off Agege Road",
+                "town": "Oshodi",
+                "phone": "08170087989",
+                "email": "trade@fcmb.com",
+                "postcode": "101011",
+                "airline": "British Airways",
+                "ticket": "BA-260218-123456",
+                "route": "Off Agege road",
+                "idnumber": "A234567890",
+                "comments": "I love this app",
+                "bname": "Jide Ogungbe",
+                "baddress":"5, Joel Ogunsola, Ikeja",
+                "bphone":"07032453245",
+                "baccount": "0017674230",
+                "bcountries": "Canada",
+                "bpostcode": "5012843",
+                "ibname":"Ismail Olabode",
+                "ibswiftcode":"2345163663526",
+                "ibaddress": "9, Isale Eko Street, Idumota, Lagos",
+                "ibcity":"Idumota",
+                "ibstate":"Lagos",
+                "ibpostalcode": "10112342",
+                "bbname": "Agboola Blessing",
+                "bbaddress":"Block C, Plot 4, Obasanjo Road, Abuja",
+                "bbcity":"Abuja",
+                "bbcountry":"Nigeria",
+                "bbswiftcode":"245273456235",
+                "bbstate":"Abuja",
+                "bbpostalcode":"10011232",
+                "payment":"Shipment of A",
+                "amount":"$5,000",
+                "charge": "$1,045",
+                "applied": "Five thousand US Dollars",
+                "info": "FCMB International Trade. Tell me more",
+                "valid":"null",
+                "transfer": "null",
+                "estimated": "$1,200",
+                "formnumber": "321456789321",
+                "status":"Submitted",
+                "date":"25/02/18"
+
+            },
+
+            {
+                "id":"3",
+                "name": "Omolola Sanni",
+                "address": "7, Onitsha Street, off Agege Road",
+                "town": "Oshodi",
+                "phone": "08062820179",
+                "email": "trade@fcmb.com",
+                "postcode": "101011",
+                "airline": "British Airways",
+                "ticket": "BA-260218-123456",
+                "route": "Off Agege road",
+                "idnumber": "A234567890",
+                "comments": "I love this app",
+                "bname": "Akinyomi Olufemi",
+                "baddress":"5, Joel Ogunsola, Ikeja",
+                "bphone":"07032453245",
+                "baccount": "0017674230",
+                "bcountries": "Canada",
+                "bpostcode": "5012843",
+                "ibname":"Ismail Olabode",
+                "ibswiftcode":"2345163663526",
+                "ibaddress": "9, Isale Eko Street, Idumota, Lagos",
+                "ibcity":"Idumota",
+                "ibstate":"Lagos",
+                "ibpostalcode": "10112342",
+                "bbname": "Agboola Blessing",
+                "bbaddress":"Block C, Plot 4, Obasanjo Road, Abuja",
+                "bbcity":"Abuja",
+                "bbcountry":"Nigeria",
+                "bbswiftcode":"245273456235",
+                "bbstate":"Abuja",
+                "bbpostalcode":"10011232",
+                "payment":"Shipment of A",
+                "amount":"$5,000",
+                "charge": "$1,045",
+                "applied": "Five thousand US Dollars",
+                "info": "FCMB International Trade. Tell me more",
+                "valid":"null",
+                "transfer": "null",
+                "estimated": "$1,200",
+                "formnumber": "321456789322",
+                "status":"Saved",
+                "date":"24/02/18"
+
+            },
+
+            {
+                "id":"4",
+                "name": "Titus George",
+                "address": "7, Onitsha Street, off Agege Road",
+                "town": "Oshodi",
+                "phone": "08062820179",
+                "email": "trade@fcmb.com",
+                "postcode": "101011",
+                "airline": "British Airways",
+                "ticket": "BA-260218-123456",
+                "route": "Off Agege road",
+                "idnumber": "A234567890",
+                "comments": "I love this app",
+                "bname": "Mike Ayodeji Olawale",
+                "baddress":"5, Joel Ogunsola, Ikeja",
+                "bphone":"07032453245",
+                "baccount": "0017674230",
+                "bcountries": "Canada",
+                "bpostcode": "5012843",
+                "ibname":"Ajiboye Adekola",
+                "ibswiftcode":"2345163663526",
+                "ibaddress": "9, Isale Eko Street, Idumota, Lagos",
+                "ibcity":"Idumota",
+                "ibstate":"Lagos",
+                "ibpostalcode": "10112342",
+                "bbname": "Agboola Blessing",
+                "bbaddress":"Block C, Plot 4, Obasanjo Road, Abuja",
+                "bbcity":"Abuja",
+                "bbcountry":"Nigeria",
+                "bbswiftcode":"245273456235",
+                "bbstate":"Abuja",
+                "bbpostalcode":"10011232",
+                "payment":"Shipment of A",
+                "amount":"$5,000",
+                "charge": "$1,045",
+                "applied": "Five thousand US Dollars",
+                "info": "FCMB International Trade. Tell me more",
+                "valid":"null",
+                "transfer": "null",
+                "estimated": "$1,200",
+                "formnumber": "321456789323",
+                "status":"Submitted",
+                "date":"23/02/18"
+
+            },
+            {
+                "id":"5",
+                "name": "Rasaq Ibrahim",
+                "address": "7, Onitsha Street, off Agege Road",
+                "town": "Oshodi",
+                "phone": "08062820179",
+                "email": "trade@fcmb.com",
+                "postcode": "101011",
+                "airline": "British Airways",
+                "ticket": "BA-260218-123456",
+                "route": "Off Agege road",
+                "idnumber": "A234567890",
+                "comments": "I love this app",
+                "bname": "Mike Ayodeji Olawale",
+                "baddress":"5, Joel Ogunsola, Ikeja",
+                "bphone":"07032453245",
+                "baccount": "0017674230",
+                "bcountries": "Canada",
+                "bpostcode": "5012843",
+                "ibname":"Rose Nonye",
+                "ibswiftcode":"2345163663526",
+                "ibaddress": "9, Isale Eko Street, Idumota, Lagos",
+                "ibcity":"Idumota",
+                "ibstate":"Lagos",
+                "ibpostalcode": "10112342",
+                "bbname": "Agboola Blessing",
+                "bbaddress":"Block C, Plot 4, Obasanjo Road, Abuja",
+                "bbcity":"Abuja",
+                "bbcountry":"Nigeria",
+                "bbswiftcode":"245273456235",
+                "bbstate":"Abuja",
+                "bbpostalcode":"10011232",
+                "payment":"Shipment of A",
+                "amount":"$5,000",
+                "charge": "$1,045",
+                "applied": "Five thousand US Dollars",
+                "info": "FCMB International Trade. Tell me more",
+                "valid":"null",
+                "transfer": "null",
+                "estimated": "$1,200",
+                "formnumber": "321456789324",
+                "status":"Approved",
+                "date":"22/02/18"
+
+            },
+
+            {
+                "id":"6",
+                "name": "Oluwaseun Agbaje",
+                "address": "7, Onitsha Street, off Agege Road",
+                "town": "Oshodi",
+                "phone": "08062820179",
+                "email": "trade@fcmb.com",
+                "postcode": "101011",
+                "airline": "British Airways",
+                "ticket": "BA-260218-123456",
+                "route": "Off Agege road",
+                "idnumber": "A234567890",
+                "comments": "I love this app",
+                "bname": "Ayodeji Alabi",
+                "baddress":"5, Joel Ogunsola, Ikeja",
+                "bphone":"07032453245",
+                "baccount": "0017674230",
+                "bcountries": "Canada",
+                "bpostcode": "5012843",
+                "ibname":"Victoria Olabode",
                 "ibswiftcode":"2345163663526",
                 "ibaddress": "9, Isale Eko Street, Idumota, Lagos",
                 "ibcity":"Idumota",

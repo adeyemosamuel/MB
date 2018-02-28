@@ -1,0 +1,130 @@
+<ion-header>
+
+    <ion-navbar color="fcmb">
+      <ion-title text-center>
+        <span text-color="my-custom-color">REMITTANCE</span>
+      </ion-title>
+    </ion-navbar>
+  
+  </ion-header>
+  
+  
+  <ion-content padding> 
+  
+    <ion-item-group>
+      <div class="details">
+        <h4 no-lines color="fcmb" text-color="my-custom-color">INTERMEDIARY BANK DETAILS</h4>
+      </div>
+  
+      <div>
+          <ion-item style="color:white" no-lines class="item3">
+            <ion-input placeholder="Intermediary Bank Name" [ngModel]="selectedItem4?.ibname" (ngModelChange)="selectedItem4.ibname=$event" type="text"></ion-input>
+          </ion-item>
+        </div>
+  
+        <div>
+            <ion-item style="color:white" no-lines class="item3">
+              <ion-input placeholder="Intermediary Swift Code" [ngModel]="selectedItem4?.ibswiftcode" (ngModelChange)="selectedItem4.ibswiftcode=$event" type="text"></ion-input>
+            </ion-item>
+          </div>
+  
+  
+        <div>
+            <ion-item style="color:white" no-lines class="item3">
+              <ion-input placeholder="Intermediary Bank Address" [ngModel]="selectedItem4?.ibaddress" (ngModelChange)="selectedItem4.ibaddress=$event" type="text"></ion-input>
+            </ion-item>
+          </div>
+  
+          <div>
+              <ion-item style="color:white" no-lines class="item3">
+                <ion-input placeholder="Intermediary Bank City" [ngModel]="selectedItem4?.ibcity" (ngModelChange)="selectedItem4.ibcity=$event" type="text"></ion-input>
+              </ion-item>
+            </div>
+  
+            <div>
+                <ion-item style="color:white" no-lines class="item3">
+                  <ion-input placeholder="Intermediary Bank State" [ngModel]="selectedItem4?.ibstate" (ngModelChange)="selectedItem4.ibstate=$event" type="text"></ion-input>
+                </ion-item>
+              </div>
+  
+              <div>
+                  <ion-item style="color:white" no-lines class="item3">
+                    <ion-input placeholder="Intermediary Bank Country" [ngModel]="selectedItem4?.ibcountry" (ngModelChange)="selectedItem4.ibcountry=$event" type="text"></ion-input>
+                  </ion-item>
+                </div>
+  
+                <div>
+                    <ion-item style="color:white" no-lines class="item3">
+                      <ion-input placeholder="Intermediary Bank  Postal Code" [ngModel]="selectedItem4?.ibpostalcode" (ngModelChange)="selectedItem4.ibpostalcode=$event" type="text"></ion-input>
+                    </ion-item>
+                  </div>
+  
+  
+  
+      <div class="details2">
+        <h4 no-lines color="fcmb" text-color="my-custom-color">BENEFICIARY BANK DETAILS</h4>
+      </div>
+  
+      <div>
+          <ion-item style="color:white" no-lines class="item8">
+            <ion-input placeholder="*Beneficiary Bank Name" [ngModel]="selectedItem4?.bbname" (ngModelChange)="selectedItem4.bbname=$event" type="text"></ion-input>
+          </ion-item>
+        </div>
+  
+        <div>
+            <ion-item style="color:white" no-lines class="item9">
+              <ion-input placeholder="*Beneficiary Bank Address" [ngModel]="selectedItem4?.bbaddress" (ngModelChange)="selectedItem4.bbaddress=$event" type="text"></ion-input>
+            </ion-item>
+          </div>
+  
+          <div>
+              <ion-item style="color:white" no-lines class="item10">
+                <ion-input placeholder="*Beneficiary Bank City" [ngModel]="selectedItem4?.bbcity" (ngModelChange)="selectedItem4.bbcity=$event" type="text"></ion-input>
+              </ion-item>
+            </div>
+  
+            <div>
+                <ion-item style="color:white" no-lines class="item11">
+                  <ion-input placeholder="*Beneficiary Bank Country" [ngModel]="selectedItem4?.bbcountry" (ngModelChange)="selectedItem4.bbcountry=$event" type="text"></ion-input>
+                </ion-item>
+              </div>
+  
+              <div>
+                  <ion-item style="color:white" no-lines class="item12">
+                    <ion-input placeholder="*Beneficiary Swift Code" [ngModel]="selectedItem4?.bbswiftcode" (ngModelChange)="selectedItem4.bbswiftcode=$event" type="text"></ion-input>
+                  </ion-item>
+                </div>
+  
+                <div>
+                    <ion-item style="color:white" no-lines class="item13">
+                      <ion-input placeholder="*Beneficiary Bank State" [ngModel]="selectedItem4?.bbstate" (ngModelChange)="selectedItem4.bbstate=$event" type="text"></ion-input>
+                    </ion-item>
+                  </div>
+  
+                  <div>
+                      <ion-item style="color:white" no-lines class="item14">
+                        <ion-input placeholder="*Beneficiary Bank Postal Code" [ngModel]="selectedItem4?.bbpostalcode" (ngModelChange)="selectedItem4.bbpostalcode=$event" type="text"></ion-input>
+                      </ion-item>
+                    </div>
+  
+  
+      <div class="button">
+        <ion-grid>
+          <ion-row>
+            <ion-col col-6>
+        <button ion-button block tappable color="fcmb2" (click)="save()">
+          <span style="font-weight:bold; color:white">SAVE</span>
+        </button>
+      </ion-col>
+  
+      <ion-col col-6>
+          <button ion-button block tappable color="fcmb2" (click)="submit()">
+            <span style="font-weight:bold; color:white">SUBMIT</span>
+          </button>
+        </ion-col>
+      </ion-row>
+      </ion-grid>
+      </div>
+    </ion-item-group>
+  
+  </ion-content>

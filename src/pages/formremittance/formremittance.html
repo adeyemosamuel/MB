@@ -111,10 +111,7 @@
   <div>
     <ion-item style="color:white" no-lines class="item8">
       <ion-select class="Select" [(ngModel)]="identification">
-        <ion-option value="passport">International Passport</ion-option>
-        <ion-option value="national">National ID Card</ion-option>
-        <ion-option value="driver">Driver's License</ion-option>
-        <ion-option value="voters">Voter's Card</ion-option>
+          <ion-option *ngFor="let m of iData">{{m.mode}}</ion-option>
       </ion-select>
     </ion-item>
   </div>

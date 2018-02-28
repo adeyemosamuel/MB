@@ -35,7 +35,7 @@
       </ion-list>
 
       <ion-list *ngSwitchCase="'remittance'">
-          <div  [ngClass]="r.status" class="general"  *ngFor="let r of FormRemittance">
+          <div (click)="itemTapped2(r)" [ngClass]="r.status" class="general"  *ngFor="let r of FormRemittance">
               <h5>Beneficiary:{{r.name}}</h5>
               <h6>Form Number:{{r.formnumber}}</h6>
               <span>Created On:{{r.date}}</span>

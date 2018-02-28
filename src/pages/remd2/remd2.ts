@@ -6,17 +6,16 @@ import { AppdataProvider } from '../../providers/appdata/appdata';
 
 @IonicPage()
 @Component({
-  selector: 'page-rd2',
-  templateUrl: 'rd2.html',
+  selector: 'page-remd2',
+  templateUrl: 'remd2.html',
 })
-export class Rd2Page {
- 
+export class Remd2Page {
   selectedItem2: any;
   id: number;
   selectedItem:any;
   countryData: any = [];
 
-  constructor(public navCtrl: NavController,
+  constructor(public navCtrl: NavController, 
     private appdata: AppdataProvider, 
     public navParams: NavParams) {
   }
@@ -28,7 +27,7 @@ export class Rd2Page {
   }
  
   next(){
-    this.navCtrl.push('Rd3Page', {
+    this.navCtrl.push('Remd3Page', {
       selectedItem2:this.selectedItem2,
       
     });

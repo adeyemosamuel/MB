@@ -29,6 +29,7 @@ export class FormremittancePage {
   idnumber: any;
   comments: any;
   username: any;
+  iData: any = [];
   stateData: any = [];
   countryData: any = [];
   FormRemittance: Array<any> = [];
@@ -49,7 +50,7 @@ export class FormremittancePage {
   ionViewDidLoad() {
     this.stateData = this.appdata.getState();
     this.countryData = this.appdata.getCountry();
-
+    this.iData= this.appdata.getID();
   }
 
   selectCancel() {
