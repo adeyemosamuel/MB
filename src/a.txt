@@ -48,3 +48,27 @@
   </ion-grid>
 
 </ion-content>
+
+
+
+
+filterFORMA(ev){
+      this.FormArray= this._FormArray;
+      var val = ev.target.value;
+  if (val && val.trim() != '') {
+      this.FormArray = this.FormArray.filter((item) => {
+          return (item.name.toLowerCase().indexOf(val.toLowerCase()) > -1);
+      });
+  }
+}
+
+  filterREMITTANCE(ev) {
+        this.FormRemittance = this._FormRemittance;
+        var val = ev.target.value;
+    if (val && val.trim() != '') {
+        this.FormRemittance = this.FormRemittance.filter((item) => {
+            return (item.name.toLowerCase().indexOf(val.toLowerCase()) > -1);
+        });
+    }
+
+}

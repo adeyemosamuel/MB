@@ -125,7 +125,7 @@ filterFORMA(val) {
   }
 
   if (val && val.trim() != '') {
-      this.FormArray = this._FormArray.filter((item) => {
+      this.FormArray = this.FormArray.filter((item) => {
           return (item.name.toLowerCase().indexOf(val.toLowerCase()) > -1);
       });
   }
@@ -139,7 +139,7 @@ filterFORMA(val) {
     }
 
     if (val && val.trim() != '') {
-        this.FormRemittance = this._FormRemittance.filter((item) => {
+        this.FormRemittance = this.FormRemittance.filter((item) => {
             return (item.name.toLowerCase().indexOf(val.toLowerCase()) > -1);
         });
     }
