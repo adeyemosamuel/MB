@@ -107,7 +107,7 @@ export class AddformsPage {
     });
   }
 
-  getItems(ev) {
+getItems(ev) {
 
     let searchKey = ev.target.value;
     if (this.forms === 'a') {
@@ -119,8 +119,8 @@ export class AddformsPage {
 
 filterFORMA(val) {
 
-  if(!val || val.length < 1) {
-      this.FormArray= this._FormArray;
+  if(!val && val.length < 1) {
+      this.FormArray=this.appdata.getInfo();
       return;
   }
 
@@ -129,12 +129,13 @@ filterFORMA(val) {
           return (item.name.toLowerCase().indexOf(val.toLowerCase()) > -1);
       });
   }
+ 
 }
 
   filterREMITTANCE(val) {
   
-    if(!val || val.length < 1) {
-        this.FormRemittance = this._FormRemittance;
+    if(!val && val.length < 1) {
+        this.FormRemittance = this.appdata.getMoney();
         return;
     }
 
