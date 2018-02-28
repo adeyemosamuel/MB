@@ -31,6 +31,7 @@
           <div (click)="itemTapped(f)" [ngClass]="f.status"  class="general"  *ngFor="let f of FormArray">
             <h5>Beneficiary:{{f.name}}</h5>
             <h6>Form Number:{{f.formnumber}}</h6>
+            <p>Status:{{f.status}}</p>
             <span>Created On:{{f.date}}</span>
           </div>
       </ion-list>
@@ -39,6 +40,7 @@
           <div (click)="itemTapped2(r)" [ngClass]="r.status" class="general"  *ngFor="let r of FormRemittance">
               <h5>Beneficiary:{{r.name}}</h5>
               <h6>Form Number:{{r.formnumber}}</h6>
+              <p>Status:{{r.status}}</p>
               <span>Created On:{{r.date}}</span>
           </div>
       </ion-list>
