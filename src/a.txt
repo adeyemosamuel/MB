@@ -1,0 +1,50 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title><span text-uppercase id="ionTitle">More</span></ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col text-center (click)="benefit()">
+        <i class="fa fa-briefcase" aria-hidden="true"></i>
+        <p>Products</p>
+      </ion-col>
+
+      <ion-col text-center (click)="branches()">
+        <i class="fa fa-building" aria-hidden="true"></i>
+        <p>Branches</p>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col text-center (click)="calculator()">
+        <i class="fa fa-calculator" aria-hidden="true"></i>
+        <p>Pension Calculator</p>
+      </ion-col>
+
+      <ion-col text-center (click)="chart()">
+        <i class="fa fa-area-chart" aria-hidden="true"></i>
+        <p>Price Chart</p>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col text-center (click)="survey()">
+        <i class="fa fa-list-alt" aria-hidden="true"></i>
+        <p>Surveys</p>
+      </ion-col>
+
+      <ion-col text-center (click)="faq()">
+        <i class="fa fa-question-circle" aria-hidden="true"></i>
+        <p>FAQ</p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

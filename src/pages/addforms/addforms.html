@@ -19,8 +19,9 @@
 
 </ion-header>
 
-
+ 
 <ion-content padding>
+    <ion-searchbar [(ngModel)]="searchTerm" (ionInput)="getItems($event)"></ion-searchbar>
   <!-- Swipe -->
   <div class="main-content" (swipe)="swipe($event)">
 

@@ -12,6 +12,8 @@ import { AppdataProvider } from '../../providers/appdata/appdata';
   templateUrl: 'addforms.html',
 })
 export class AddformsPage {
+  _FormRemittance: any[];
+  _FormArray: any[];
 
   forms = "a";
   name:any;
@@ -20,6 +22,7 @@ export class AddformsPage {
   date:any;
   f:any;
   selectedItem: any;
+  searchTerm: any;
   // FormArray: any= {};
   FormArray: Array<any> = [];
   FormRemittance: Array<any> = [];
@@ -104,4 +107,45 @@ export class AddformsPage {
     });
   }
 
+  getItems(ev) {
+
+    let searchKey = ev.target.value;
+    if (this.forms === 'a') {
+        this.filterFORMA(searchKey);
+    } else {
+        this.filterREMITTANCE(searchKey);
+    }
 }
+
+filterFORMA(val) {
+
+  if(!val || val.length < 1) {
+      this.FormArray= this._FormArray;
+      return;
+  }
+
+  if (val && val.trim() != '') {
+      this.FormArray = this._FormArray.filter((item) => {
+          return (item.name.toLowerCase().indexOf(val.toLowerCase()) > -1);
+      });
+  }
+}
+
+  filterREMITTANCE(val) {
+  
+    if(!val || val.length < 1) {
+        this.FormRemittance = this._FormRemittance;
+        return;
+    }
+
+    if (val && val.trim() != '') {
+        this.FormRemittance = this._FormRemittance.filter((item) => {
+            return (item.name.toLowerCase().indexOf(val.toLowerCase()) > -1);
+        });
+    }
+
+}
+
+
+}
+

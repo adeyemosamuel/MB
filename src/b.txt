@@ -1,0 +1,81 @@
+page-home {
+    background-color: map-get($colors, light);
+    height: 100%;
+
+    ion-header {
+        background-image: url('../assets/images/8.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        ion-navbar {
+            background-color: rgba(map-get($colors, primary),0.8);
+        }
+    }
+
+    ion-grid {
+        height: 100% !important;
+    }
+
+    ion-row {
+        height: 33% !important;
+    }
+
+    ion-col {
+        background-color: map-get($colors, lighter);
+        border: 10px solid map-get($colors, light);
+        padding-top: 10% !important;
+
+        i {
+            font-size: 30px !important;
+            color: map-get($colors, primary);
+        }
+    }
+
+    @media screen and (max-height: 570px) {
+        ion-col {
+            background-color: map-get($colors, lighter);
+            border: 10px solid map-get($colors, light);
+            padding-top: 5% !important;
+
+            i {
+                font-size: 30px !important;
+                color: map-get($colors, primary);
+            }
+        }
+    }
+
+    @media screen and (min-height: 1000px) {
+        ion-col {
+            background-color: map-get($colors, lighter);
+            border: 10px solid map-get($colors, light);
+            padding-top: 10% !important;
+
+            i {
+                font-size: 60px !important;
+                color: map-get($colors, primary);
+            }
+
+            p {
+                font-size: 20px !important;
+            }
+        }
+    }
+}
+
+.md {
+    page-home {
+        #ionTitle {
+            font-weight: bold !important;
+        }
+    }
+}
+
+.ios {
+    page-home {
+        @media screen and (max-width: 330px) {
+            #ionTitle {
+                font-size: 12px;
+            }
+        }
+    }
+}
