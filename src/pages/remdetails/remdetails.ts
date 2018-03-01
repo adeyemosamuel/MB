@@ -11,7 +11,7 @@ export class RemdetailsPage {
 
   selectedItem: any;
   id: number;
-  f: any;
+  r: any;
   iData: any = [];
   stateData: any = [];
   countryData: any = [];

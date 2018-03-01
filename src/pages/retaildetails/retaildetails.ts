@@ -32,7 +32,7 @@ export class RetaildetailsPage {
     console.log(this.navParams.get('f'));
     
   }
-
+ 
   next(){
     this.navCtrl.push('Rd2Page', {
       selectedItem:this.selectedItem,
