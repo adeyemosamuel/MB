@@ -21,7 +21,7 @@
     <div>
       <ion-item no-lines  style="color:white"  class="item1">
         <ion-icon color="money" name="mail" item-start ></ion-icon>
-        <ion-input  [(ngModel)]="username" placeholder="Enter Username" type="text"></ion-input>
+        <ion-input  [(ngModel)]="userName" placeholder="Enter Username" type="text"></ion-input>
       </ion-item>
     </div>
 
@@ -29,7 +29,7 @@
 
       <ion-item no-lines style="color:white" class="item2">
         <ion-icon color="money" name="lock" item-start ></ion-icon>
-        <ion-input [(ngModel)]="password" placeholder="Enter your password" type="password"></ion-input>
+        <ion-input [(ngModel)]="passWord" placeholder="Enter your password" type="password"></ion-input>
       </ion-item>
     </div>
 
@@ -38,7 +38,7 @@
     </p>
 
     <div>
-      <button class="button" icon-start ion-button round block tappable color="fcmb2" (click)="Login()">
+      <button class="button" icon-start ion-button round block tappable color="fcmb2" (click)="Login()" [disabled]="disableButton">
         <!-- <ion-icon name="log-in"></ion-icon> -->
         <span style="font-weight:bold; color:white"> LOG IN</span>
       </button>
