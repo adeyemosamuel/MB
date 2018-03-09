@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, App } from 'ionic-angular';
 
 
 @IonicPage()
@@ -9,7 +9,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class MorePage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController,public _app: App, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
@@ -21,8 +21,13 @@ export class MorePage {
       this.navCtrl.parent.select(2);
     }
     if(event.direction === 4) {
-      this.navCtrl.parent.select(0);
+      this.navCtrl.parent.select(0); 
     }
+  }
+
+  logout(){
+    localStorage.removeItem("currentUser");
+    this._app.getRootNav().setRoot('LoginPage');
   }
 
 }
